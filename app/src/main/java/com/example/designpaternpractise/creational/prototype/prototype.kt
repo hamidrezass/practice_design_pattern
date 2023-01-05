@@ -26,7 +26,7 @@ class MyCircle : MyShape {
     }
 
     override fun equals(object2: Any?): Boolean {
-        if (object2 !is MyCircle || !super.equals(object2)) return false
+        if (object2 !is MyCircle || super.equals(object2)) return false
         return object2.radius === radius
     }
 
@@ -46,9 +46,10 @@ class MyRectangle : MyShape {
      return MyRectangle(this)
     }
 
-    override fun equals(object2: Any?): Boolean {
-        if (object2 !is MyRectangle || !super.equals(object2)) return false
-        val shape2: MyRectangle = object2 as MyRectangle
-        return shape2.width == width && shape2.height == height
-    }
+    //todo
+//    override fun equals(object2: Any?): Boolean {
+//        if (object2 !is MyRectangle || super.equals(object2)) return false
+//        val shape2: MyRectangle = object2 as MyRectangle
+//        return shape2.width == width && shape2.height == height
+//    }
 }
